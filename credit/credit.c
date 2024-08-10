@@ -19,9 +19,13 @@ int main() {
         cksum2 += getDigitEODL(multiplier);
         multiplier *= 100;
     }
-    if(cardNumber%(100*10000000000000000)/(10*10000000000000000) == 4) {
+    if(getDigitEODSL(multiplier) == 4) {
         cardT = 1;
-    } else if(cardNumber%(100*10000000000000000)/(10*10000000000000000) == 5 && (cardNumber%(10*10000000000000000)/(1*10000000000000000) > 0) && (cardNumber%(10*10000000000000000)/(1*10000000000000000) > 0))
+    } else if(getDigitEODSL(multiplier) == 5 && getDigitEODL(multiplier) > 0 && getDigitEODL(multiplier) < 6) {
+        cardT = 2;
+    } else if(getDigitEODSL(multiplier) == 0 && getDigitEODL(multiplier) == 3 && (getDigitEODSL(multiplier/100) == 4 || getDigitEODSL(multiplier/100) == 7)) {
+        cardT = 3;
+    }
     if((cksum1 + cksum2) % 10 == 0) {
 
     }
