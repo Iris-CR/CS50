@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <cs50.h>
 
-int getDigitEODSL(long int mult);
-int getDigitEODL(long int mult);
+int getDigitEODSL(long int cardN, long int mult);
+int getDigitEODL(long int cardN, long int mult);
 
 int main() {
     long int cardNumber = get_long("Number: ");
@@ -12,20 +12,20 @@ int main() {
     long int multiplier = 1;
     printf("%li\n", cardNumber);
     for(int i = 0; i < 8; i++) { // Picks numbers skiping a decimal place
-        cksum1 += getDigitEODSL(multiplier);
+        cksum1 += getDigitEODSL(cardNumber, multiplier);
         multiplier *= 100;
     }
     multiplier = 1;
     for(int i = 0; i < 8; i++) { // Picks numbers skiping a decimal place starting with the last
-        cksum2 += getDigitEODL(multiplier);
+        cksum2 += getDigitEODL(cardNumber, multiplier);
         multiplier *= 100;
     }
 
-    if(getDigitEODSL(multiplier) == 4) {
+    if(getDigitEODSL(cardNumber, multiplier) == 4) {
         cardT = 1;
-    } else if(getDigitEODSL(multiplier) == 5 && getDigitEODL(multiplier) > 0 && getDigitEODL(multiplier) < 6) {
+    } else if(getDigitEODSL(cardNumber, multiplier) == 5 && getDigitEODL(cardNumber, multiplier) > 0 && getDigitEODL(cardNumber, multiplier) < 6) {
         cardT = 2;
-    } else if(getDigitEODSL(multiplier) == 0 && getDigitEODL(multiplier) == 3 && (getDigitEODSL(multiplier/100) == 4 || getDigitEODSL(multiplier/100) == 7)) {
+    } else if(getDigitEODSL(cardNumber, multiplier) == 0 && getDigitEODL(cardNumber, multiplier) == 3 && (getDigitEODSL(cardNumber, multiplier/100) == 4 || getDigitEODSL(cardNumber, multiplier/100) == 7)) {
         cardT = 3;
     }
 
@@ -43,14 +43,14 @@ int main() {
     return 0;
 }
 
-int getDigitEODSL(long int mult) { // Every Other Digit Starting from Second to Last
-    if(cardNumber%(100*mult)/(10*mult)*2 >= 10) {
-        return (cardNumber%(100*mult)/(10*mult)*2)%10 + 1;
+int getDigitEODSL(long int cardN, long int mult) { // Every Other Digit Starting from Second to Last
+    if(cardN%(100*mult)/(10*mult)*2 >= 10) {
+        return (cardN%(100*mult)/(10*mult)*2)%10 + 1;
     }
     else
-    return cardNumber%(100*mult)/(10*mult)*2;
+    return cardN%(100*mult)/(10*mult)*2;
 }
 
-int getDigitEODL(long int mult) { // Every Other Digit Starting from Last
-    return cardNumber%(10*multiplier)/(1*multiplier);
+int getDigitEODL(long int cardN, long int mult) { // Every Other Digit Starting from Last
+    return cardN%(10*mult)/(1*mult);
 }
