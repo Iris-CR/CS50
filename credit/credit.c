@@ -16,6 +16,11 @@ int main() {
         cksum1 += temp;
         multiplier *= 100;
     }
-    printf("%i\n", cksum1);
+    multiplier = 1;
+    for(int i = 0; i < 8; i++) { // Picks numbers skiping a decimal place starting with the last
+        cksum2 += cardNumber%(10*multiplier)/(1*multiplier);
+        multiplier *= 100;
+    }
+    printf("%i\n", cksum1+cksum2);
     return 0;
 }
