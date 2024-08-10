@@ -11,7 +11,7 @@ int main() {
     for(int i = 0; i < 8; i++) { // Picks numbers skiping a decimal place
         temp = cardNumber%(100*multiplier)/(10*multiplier);
         if(temp >= 10) {
-            temp = temp%10 + temp/10;
+            temp = temp%10 + 1;
         }
         cksum1 += temp;
         multiplier *= 100;
