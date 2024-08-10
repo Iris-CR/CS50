@@ -19,6 +19,7 @@ int main() {
         cksum2 += getDigitEODL(multiplier);
         multiplier *= 100;
     }
+
     if(getDigitEODSL(multiplier) == 4) {
         cardT = 1;
     } else if(getDigitEODSL(multiplier) == 5 && getDigitEODL(multiplier) > 0 && getDigitEODL(multiplier) < 6) {
@@ -26,8 +27,17 @@ int main() {
     } else if(getDigitEODSL(multiplier) == 0 && getDigitEODL(multiplier) == 3 && (getDigitEODSL(multiplier/100) == 4 || getDigitEODSL(multiplier/100) == 7)) {
         cardT = 3;
     }
-    if((cksum1 + cksum2) % 10 == 0) {
 
+    if((cksum1 + cksum2) % 10 == 0) {
+        if(cardT == 1) {
+            printf("VISA\n");
+        } else if(cardT == 2) {
+            printf("MASTERCARD\n");
+        } else if(cardT == 3) {
+            printf("AMEX\n");
+        }
+    } else {
+        printf("INVALID\n");
     }
     return 0;
 }
