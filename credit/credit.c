@@ -19,7 +19,8 @@ int main() {
         cksum2 += getDigitEODL(cardNumber, multiplier);
         multiplier *= 100;
     }
-
+    printf("%li\n", multiplier);
+    printf("%i\n", getDigitEODSL(cardNumber, multiplier));
     if(getDigitEODSL(cardNumber, multiplier) == 4) {
         cardT = 1;
     } else if(getDigitEODSL(cardNumber, multiplier) == 5 && getDigitEODL(cardNumber, multiplier) > 0 && getDigitEODL(cardNumber, multiplier) < 6) {
@@ -27,7 +28,7 @@ int main() {
     } else if(getDigitEODSL(cardNumber, multiplier) == 0 && getDigitEODL(cardNumber, multiplier) == 3 && (getDigitEODSL(cardNumber, multiplier/100) == 4 || getDigitEODSL(cardNumber, multiplier/100) == 7)) {
         cardT = 3;
     }
-
+    printf("%i", cardT);
     if((cksum1 + cksum2) % 10 == 0) {
         if(cardT == 1) {
             printf("VISA\n");
