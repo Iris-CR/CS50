@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <cs50.h>
 
-int getDigitEODSL(long int mult)
+int getDigitEODSL(long int mult);
+int getDigitEODL(long int mult);
 
 int main() {
     long int cardNumber = get_long("Number: ");
