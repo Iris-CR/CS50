@@ -17,7 +17,7 @@ int main() {
     }
     multiplier = 1;
     for(int i = 0; i < 8; i++) { // Picks numbers skiping a decimal place starting with the last
-        cksum2 += cardNumber%(10*multiplier)/(1*multiplier);
+
         multiplier *= 100;
     }
     if(cardNumber%(100*10000000000000000)/(10*10000000000000000) == 4) {
@@ -29,11 +29,15 @@ int main() {
     return 0;
 }
 
-int getDigitEODSL(long int mult) { // Every Other Digit Starting from Last
+int getDigitEODSL(long int mult) { // Every Other Digit Starting from Second to Last
     temp = cardNumber%(100*mult)/(10*mult)*2;
     if(temp >= 10) {
         temp = temp%10 + 1;
     }
     cksum1 += temp;
     return temp;
+}
+
+int getDigitEODL(long int mult) { // Every Other Digit Starting from Last
+    cksum2 += cardNumber%(10*multiplier)/(1*multiplier);
 }
