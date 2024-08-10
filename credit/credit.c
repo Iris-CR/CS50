@@ -19,6 +19,8 @@ int main() {
         cksum2 += getDigitEODL(cardNumber, multiplier);
         multiplier *= 100;
     }
+    printf("%i\n", cksum1);
+    printf("%i\n", cksum2);
     if(getDigitEODSL(cardNumber, multiplier) == 4) {
         cardT = 1;
     } else if(getDigitEODSL(cardNumber, multiplier) == 5 && getDigitEODL(cardNumber, multiplier) > 0 && getDigitEODL(cardNumber, multiplier) < 6) {
@@ -42,7 +44,6 @@ int main() {
 
 int getDigitEODSL(long int cardN, long int mult) { // Every Other Digit Starting from Second to Last
     int temp = cardN % (100 * mult)/(10 * mult) * 2;
-    printf("%i", temp);
     if(temp >= 10) {
         temp = temp%10 + 1;
     }
