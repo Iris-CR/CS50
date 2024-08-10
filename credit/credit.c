@@ -2,7 +2,7 @@
 #include <cs50.h>
 
 int getDigitEODSL(long int cardN, long int mult);
-int getDigitEODL(long int cardN, long int mult);
+long int getDigitEODL(long int cardN, long int mult);
 
 int main() {
     long int cardNumber = get_long("Number: ");
@@ -20,7 +20,7 @@ int main() {
         multiplier *= 100;
     }
     printf("%li\n", multiplier);
-    printf("%i\n", getDigitEODSL(cardNumber, multiplier));
+    printf("%li\n", getDigitEODL(cardNumber, multiplier));
     if(getDigitEODSL(cardNumber, multiplier) == 4) {
         cardT = 1;
     } else if(getDigitEODSL(cardNumber, multiplier) == 5 && getDigitEODL(cardNumber, multiplier) > 0 && getDigitEODL(cardNumber, multiplier) < 6) {
@@ -51,6 +51,6 @@ int getDigitEODSL(long int cardN, long int mult) { // Every Other Digit Starting
     return cardN%(100*mult)/(10*mult)*2;
 }
 
-int getDigitEODL(long int cardN, long int mult) { // Every Other Digit Starting from Last
+long int getDigitEODL(long int cardN, long int mult) { // Every Other Digit Starting from Last
     return cardN%(10*mult)/(1*mult);
 }
