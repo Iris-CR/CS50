@@ -10,7 +10,6 @@ int main() {
     int cksum2 = 0;
     int cardT = 0; // 1 - Visa | 2 - MasterCard | 3 - AMEX
     long int multiplier = 1;
-    printf("%li\n", cardNumber);
     for(int i = 0; i < 8; i++) { // Picks numbers skiping a decimal place
         cksum1 += getDigitEODSL(cardNumber, multiplier);
         multiplier *= 100;
