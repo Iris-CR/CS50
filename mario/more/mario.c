@@ -6,5 +6,6 @@ int main() {
     do {
         height = get_int()
     } while(height < 1 && height > 8)
+    
     return 0;
 }
