@@ -3,6 +3,7 @@
 
 int main() {
     long int cardNumber = get_long("Number: ");
-    printf("%li", cardNumber);
+    printf("%li\n", cardNumber);
+    printf("%li\n", cardNumber%100/10);
     return 0;
 }
