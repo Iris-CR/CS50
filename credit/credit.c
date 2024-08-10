@@ -22,6 +22,7 @@ int main() {
         cksum2 += cardNumber%(10*multiplier)/(1*multiplier);
         multiplier *= 100;
     }
+    if(cardNumber%(100*10000000000000000)/(10*10000000000000000) != 0)
     if((cksum1 + cksum2) % 10 == 0) {
 
     }
