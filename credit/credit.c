@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <cs50.h>
 
+int getDigitEODSL(long int mult)
+
 int main() {
     long int cardNumber = get_long("Number: ");
     int cksum1 = 0;
@@ -10,11 +12,7 @@ int main() {
     long int multiplier = 1;
     printf("%li\n", cardNumber);
     for(int i = 0; i < 8; i++) { // Picks numbers skiping a decimal place
-        temp = cardNumber%(100*multiplier)/(10*multiplier)*2;
-        if(temp >= 10) {
-            temp = temp%10 + 1;
-        }
-        cksum1 += temp;
+        getDigitEODSL(multiplier);
         multiplier *= 100;
     }
     multiplier = 1;
@@ -31,6 +29,11 @@ int main() {
     return 0;
 }
 
-int getDigitEODSL() { // Every Other Digit Starting from Last
-
+int getDigitEODSL(long int mult) { // Every Other Digit Starting from Last
+    temp = cardNumber%(100*mult)/(10*mult)*2;
+    if(temp >= 10) {
+        temp = temp%10 + 1;
+    }
+    cksum1 += temp;
+    return temp;
 }
