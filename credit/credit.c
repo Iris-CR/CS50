@@ -16,13 +16,11 @@ int main() {
         }
         cksum1 += temp;
         multiplier *= 100;
-        digitCount++;
     }
     multiplier = 1;
     for(int i = 0; i < 8; i++) { // Picks numbers skiping a decimal place starting with the last
         cksum2 += cardNumber%(10*multiplier)/(1*multiplier);
         multiplier *= 100;
-        digitCount++;
     }
     if((cksum1 + cksum2) % 10 == 0) {
 
