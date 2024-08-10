@@ -10,7 +10,9 @@ int main() {
         for(int j = 0; j < height-1; j++) {
             printf(" ");
         }
-        printf("#");
+        for(int k = 0; k < i; k++) {
+            printf("#");
+        }
     }
     return 0;
 }
