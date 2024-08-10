@@ -31,6 +31,6 @@ int main() {
     return 0;
 }
 
-int getDigit() {
-    
+int getDigitEODSL() { // Every Other Digit Starting from Last
+
 }
