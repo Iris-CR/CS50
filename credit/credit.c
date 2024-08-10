@@ -41,8 +41,8 @@ int main() {
 }
 
 long int getDigitEODSL(long int cardN, long int mult) { // Every Other Digit Starting from Second to Last
-    long int temp = cardN % (100 * mult)/(10 * mult) * 2;
-    printf("%li", temp);
+    int temp = cardN % (100 * mult)/(10 * mult) * 2;
+    printf("%i", temp);
     if(temp >= 10) {
         return temp%10 + 1;
     }
