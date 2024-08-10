@@ -21,6 +21,8 @@ int main() {
         cksum2 += cardNumber%(10*multiplier)/(1*multiplier);
         multiplier *= 100;
     }
-    printf("%i\n", cksum1+cksum2);
+    if((cksum1 + cksum2) % 10 == 0) {
+        
+    }
     return 0;
 }
