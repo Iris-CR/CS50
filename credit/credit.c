@@ -8,6 +8,7 @@ int main() {
     int multiplier = 10;
     printf("%li\n", cardNumber);
     for(i = 0; i < 8; i++) {
+        
         printf("%li\n", cardNumber%(100)/10)
     }
     printf("%li\n", cardNumber%100/10);
