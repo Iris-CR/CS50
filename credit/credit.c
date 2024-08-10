@@ -7,17 +7,16 @@ int main() {
     long int cardNumber = get_long("Number: ");
     int cksum1 = 0;
     int cksum2 = 0;
-    int temp = 0;
     int cardT = 0; // 1 - Visa | 2 - MasterCard | 3 - AMEX
     long int multiplier = 1;
     printf("%li\n", cardNumber);
     for(int i = 0; i < 8; i++) { // Picks numbers skiping a decimal place
-        getDigitEODSL(multiplier);
+        cksum1 += getDigitEODSL(multiplier);
         multiplier *= 100;
     }
     multiplier = 1;
     for(int i = 0; i < 8; i++) { // Picks numbers skiping a decimal place starting with the last
-
+        cksum2 += getDigitEODL(multiplier);
         multiplier *= 100;
     }
     if(cardNumber%(100*10000000000000000)/(10*10000000000000000) == 4) {
@@ -30,14 +29,13 @@ int main() {
 }
 
 int getDigitEODSL(long int mult) { // Every Other Digit Starting from Second to Last
-    temp = cardNumber%(100*mult)/(10*mult)*2;
-    if(temp >= 10) {
-        temp = temp%10 + 1;
+    if(cardNumber%(100*mult)/(10*mult)*2 >= 10) {
+        return (cardNumber%(100*mult)/(10*mult)*2)%10 + 1;
     }
-    cksum1 += temp;
-    return temp;
+    else
+    return cardNumber%(100*mult)/(10*mult)*2;
 }
 
 int getDigitEODL(long int mult) { // Every Other Digit Starting from Last
-    cksum2 += cardNumber%(10*multiplier)/(1*multiplier);
+    return cardNumber%(10*multiplier)/(1*multiplier);
 }
