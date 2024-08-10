@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <cs50.h>
 
-int getDigitEODSL(long int cardN, long int mult);
-long int getDigitEODL(long int cardN, long int mult);
+long int getDigitEODSL(long int cardN, long int mult);
+int getDigitEODL(long int cardN, long int mult);
 
 int main() {
     long int cardNumber = get_long("Number: ");
@@ -19,8 +19,9 @@ int main() {
         cksum2 += getDigitEODL(cardNumber, multiplier);
         multiplier *= 100;
     }
+    printf("%li\n", cardNumber);
     printf("%li\n", multiplier);
-    printf("%li\n", getDigitEODL(cardNumber, multiplier));
+    printf("%li\n", getDigitEODSL(cardNumber, multiplier));
     if(getDigitEODSL(cardNumber, multiplier) == 4) {
         cardT = 1;
     } else if(getDigitEODSL(cardNumber, multiplier) == 5 && getDigitEODL(cardNumber, multiplier) > 0 && getDigitEODL(cardNumber, multiplier) < 6) {
@@ -28,7 +29,7 @@ int main() {
     } else if(getDigitEODSL(cardNumber, multiplier) == 0 && getDigitEODL(cardNumber, multiplier) == 3 && (getDigitEODSL(cardNumber, multiplier/100) == 4 || getDigitEODSL(cardNumber, multiplier/100) == 7)) {
         cardT = 3;
     }
-    printf("%i", cardT);
+    printf("%i\n", cardT);
     if((cksum1 + cksum2) % 10 == 0) {
         if(cardT == 1) {
             printf("VISA\n");
@@ -43,14 +44,13 @@ int main() {
     return 0;
 }
 
-int getDigitEODSL(long int cardN, long int mult) { // Every Other Digit Starting from Second to Last
+long int getDigitEODSL(long int cardN, long int mult) { // Every Other Digit Starting from Second to Last
     if(cardN%(100*mult)/(10*mult)*2 >= 10) {
         return (cardN%(100*mult)/(10*mult)*2)%10 + 1;
     }
-    else
-    return cardN%(100*mult)/(10*mult)*2;
+    return (cardN%(100*mult)/(10*mult)*2);
 }
 
-long int getDigitEODL(long int cardN, long int mult) { // Every Other Digit Starting from Last
+int getDigitEODL(long int cardN, long int mult) { // Every Other Digit Starting from Last
     return cardN%(10*mult)/(1*mult);
 }
