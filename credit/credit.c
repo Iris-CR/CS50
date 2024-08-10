@@ -5,9 +5,10 @@ int main() {
     long int cardNumber = get_long("Number: ");
     int cksum1 = 0;
     int cksum2 = 0;
+    int multiplier = 10;
     printf("%li\n", cardNumber);
     for(i = 0; i < 8; i++) {
-        printf("%li\n", cardNumber%100/10)
+        printf("%li\n", cardNumber%(100)/10)
     }
     printf("%li\n", cardNumber%100/10);
     printf("%li\n", cardNumber%10000/1000);
