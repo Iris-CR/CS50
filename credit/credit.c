@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <cs50.h>
 
-long int getDigitEODSL(long int cardN, long int mult);
+int getDigitEODSL(long int cardN, long int mult);
 int getDigitEODL(long int cardN, long int mult);
 
 int main() {
@@ -40,15 +40,16 @@ int main() {
     return 0;
 }
 
-long int getDigitEODSL(long int cardN, long int mult) { // Every Other Digit Starting from Second to Last
+int getDigitEODSL(long int cardN, long int mult) { // Every Other Digit Starting from Second to Last
     int temp = cardN % (100 * mult)/(10 * mult) * 2;
     printf("%i", temp);
     if(temp >= 10) {
-        return temp%10 + 1;
+        temp = temp%10 + 1;
     }
     return temp;
 }
 
 int getDigitEODL(long int cardN, long int mult) { // Every Other Digit Starting from Last
-    return cardN%(10*mult)/(1*mult);
+    int temp = cardN%(10*mult)/(1*mult);
+    return temp;
 }
