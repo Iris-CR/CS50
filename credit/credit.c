@@ -19,8 +19,9 @@ int main() {
         cksum2 += getDigitEODL(cardNumber, multiplier);
         multiplier *= 100;
     }
+    multiplier /= 100;
     printf("%i + %i\n", cksum1, cksum2);
-    int test = getDigitEODSL(cardNumber, multiplier/100);
+    int test = getDigitEODSL(cardNumber, multiplier);
     printf("%i\n", test);
     if(getDigitEODSL(cardNumber, multiplier) == 4) {
         cardT = 1;
