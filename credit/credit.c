@@ -3,6 +3,7 @@
 
 int getDigitEODSL(long int cardN, long int mult);
 int getDigitEODL(long int cardN, long int mult);
+int getDigitEODSLRaw(long int cardN, long int mult);
 
 int main() {
     long int cardNumber = get_long("Number: ");
@@ -20,14 +21,11 @@ int main() {
         multiplier *= 100;
     }
     multiplier /= 100;
-    printf("%i + %i\n", cksum1, cksum2);
-    int test = getDigitEODSL(cardNumber, multiplier);
-    printf("%i\n", test);
-    if(getDigitEODSL(cardNumber, multiplier) == 4) {
+    if(getDigitEODSLRaw(cardNumber, multiplier) == 4) {
         cardT = 1;
-    } else if(getDigitEODSL(cardNumber, multiplier) == 5 && getDigitEODL(cardNumber, multiplier) > 0 && getDigitEODL(cardNumber, multiplier) < 6) {
+    } else if(getDigitEODSLRaw(cardNumber, multiplier) == 5 && getDigitEODL(cardNumber, multiplier) > 0 && getDigitEODL(cardNumber, multiplier) < 6) {
         cardT = 2;
-    } else if(getDigitEODSL(cardNumber, multiplier) == 0 && getDigitEODL(cardNumber, multiplier) == 3 && (getDigitEODSL(cardNumber, multiplier/100) == 4 || getDigitEODSL(cardNumber, multiplier/100) == 7)) {
+    } else if(getDigitEODSLRaw(cardNumber, multiplier) == 0 && getDigitEODL(cardNumber, multiplier) == 3 && (getDigitEODSLRaw(cardNumber, multiplier/100) == 4 || getDigitEODSLRaw(cardNumber, multiplier/100) == 7)) {
         cardT = 3;
     }
     if((cksum1 + cksum2) % 10 == 0) {
@@ -53,6 +51,9 @@ int getDigitEODSL(long int cardN, long int mult) { // Every Other Digit Starting
 }
 
 int getDigitEODL(long int cardN, long int mult) { // Every Other Digit Starting from Last
-    int temp = cardN%(10*mult)/(1*mult);
-    return temp;
+    return cardN%(10*mult)/(1*mult);
+}
+
+int getDigitEODSLRaw(long int cardN, long int mult) { // Every Other Digit Starting from Second to Last
+    return cardN % (100 * mult)/(10 * mult);
 }
