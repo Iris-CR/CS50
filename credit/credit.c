@@ -2,6 +2,7 @@
 #include <cs50.h>
 
 int main() {
-    int cardNumber = get_int("Number: ");
+    long int cardNumber = get_long("Number: ");
+    printf("%li", cardNumber);
     return 0;
 }
