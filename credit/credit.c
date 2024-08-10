@@ -9,7 +9,7 @@ int main() {
     long int multiplier = 1;
     printf("%li\n", cardNumber);
     for(int i = 0; i < 8; i++) { // Picks numbers skiping a decimal place
-        temp = cardNumber%(100*multiplier)/(10*multiplier);
+        temp = cardNumber%(100*multiplier)/(10*multiplier)*2;
         if(temp >= 10) {
             temp = temp%10 + 1;
         }
