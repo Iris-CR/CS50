@@ -20,7 +20,7 @@ int main() {
         multiplier *= 100;
     }
     printf("%i + %i\n", cksum1, cksum2);
-    int test = getDigitEODSL(cardNumber, multiplier);
+    int test = getDigitEODSL(cardNumber, multiplier/100);
     printf("%i\n", test);
     if(getDigitEODSL(cardNumber, multiplier) == 4) {
         cardT = 1;
