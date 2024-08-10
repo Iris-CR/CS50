@@ -21,7 +21,7 @@ int main() {
         multiplier *= 100;
     }
     multiplier /= 100;
-    if(getDigitEODSLRaw(cardNumber, multiplier) == 4) {
+    if(getDigitEODSLRaw(cardNumber, multiplier) == 4 || getDigitEODSLRaw(cardNumber, multiplier) == 4 ) {
         cardT = 1;
     } else if(getDigitEODSLRaw(cardNumber, multiplier) == 5 && getDigitEODL(cardNumber, multiplier) > 0 && getDigitEODL(cardNumber, multiplier) < 6) {
         cardT = 2;
