@@ -5,11 +5,12 @@ int main() {
     long int cardNumber = get_long("Number: ");
     int cksum1 = 0;
     int cksum2 = 0;
-    int multiplier = 10;
+    int multiplier = 1;
     printf("%li\n", cardNumber);
-    for(i = 0; i < 8; i++) {
-        
-        printf("%li\n", cardNumber%(100)/10)
+    for(int i = 0; i < 8; i++) {
+
+        printf("%li\n", cardNumber%(100*multiplier)/(10*multiplier));
+        multiplier *= 100;
     }
     printf("%li\n", cardNumber%100/10);
     printf("%li\n", cardNumber%10000/1000);
