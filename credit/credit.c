@@ -35,7 +35,7 @@ int main() {
             printf("MASTERCARD\n");
         } else if(cardT == 3) {
             printf("AMEX\n");
-        }
+        } else printf("INVALID\n");
     } else {
         printf("INVALID\n");
     }
