@@ -17,11 +17,9 @@ int main(int argc, string argv[]) {
         return 1;
     } else {
         for(int i = 0; argv[1][i] != '\0'; i++) {
-            if(letters[i][1] != '0') {
-                printf("%c\n", letters[i][1]);
+            if(letters[1][i] != '0') {
                 return 1;
             } else {
-                printf("%c\n", argv[1][i]);
                 letters[i][1] = argv[1][i];
             }
         }
