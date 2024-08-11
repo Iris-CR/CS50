@@ -17,9 +17,9 @@ int main(int argc, string argv[]) {
         for(int i = 0; plainTxt[i] != '\0'; i++) {
             if(isalpha(plainTxt[i])) {
                 if(isupper(plainTxt[i])) {
-                    cypherTxt[i] = argv[1][]
-                }
-            }
+                    cypherTxt[i] = toupper(argv[1][plainTxt[i-65]]);
+                } else cypherTxt[i] = tolower(argv[1][plainTxt[i-65]]);
+            } else cypherTxt[i] = plainTxt[i];
         }
         printf("cyphertext: %s\n", cypherTxt);
     }
