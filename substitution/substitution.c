@@ -20,10 +20,10 @@ int main(int argc, string argv[]) {
             if(!isalpha(argv[1][i])) {
                 return 1;
             }
-            if(letters[1][toupper(argv[1][i])] != '0') {
+            if(letters[1][toupper(argv[1][i])-65] != '0') {
                 return 1;
             } else {
-                letters[i][1] = argv[1][i];
+                letters[1][1] = argv[1][i];
             }
         }
     }
