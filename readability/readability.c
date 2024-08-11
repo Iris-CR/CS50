@@ -7,6 +7,7 @@ int main(void) {
     int letters = 0;
     int words = 0;
     int sent = 0;
+    int CLI = 0;
     for(int i = 0; text[i] != '\0'; i++) {
         if(isalpha(text[i])) {
             letters++;
@@ -16,5 +17,6 @@ int main(void) {
             sent++;
         }
     }
+    CLI = 0.0588 * letters/(words*100) - 0.296 * sent/(words*100) - 15.8;
     return 0;
 }
