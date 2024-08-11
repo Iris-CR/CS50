@@ -14,6 +14,7 @@ int main(int argc, string argv[]) {
         return 1;
     } else {
         plainTxt = get_string("plaintext:  ");
+        cypherTxt = plainTxt;
         for(int i = 0; plainTxt[i] != '\0'; i++) {
             if(isalpha(plainTxt[i])) {
                 if(isupper(plainTxt[i])) {
@@ -21,7 +22,6 @@ int main(int argc, string argv[]) {
                 } else cypherTxt[i] = tolower(argv[1][plainTxt[i]-65]);
             } else cypherTxt[i] = plainTxt[i];
         }
-        cypherTxt[strlen(plainTxt)] = '\0';
         printf("cyphertext: %s\n", cypherTxt);
     }
     return 0;
