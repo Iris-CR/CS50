@@ -16,7 +16,9 @@ int main(int argc, string argv[]) {
         plainTxt = get_string("plaintext:  ");
         for(int i = 0; plainTxt[i] != '\0'; i++) {
             if(isalpha(plainTxt[i])) {
-                
+                if(isupper(plainTxt[i])) {
+                    cypherTxt[i] = argv[1][]
+                }
             }
         }
         printf("cyphertext: %s\n", cypherTxt);
