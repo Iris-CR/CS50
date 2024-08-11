@@ -9,7 +9,7 @@ int main(void) {
     int letters = 0;
     int words = 0;
     int sent = 0;
-    int CLI = 0;
+    float CLI = 0;
     for(int i = 0; text[i] != '\0'; i++) {
         if(isalpha(text[i])) {
             letters++;
@@ -25,7 +25,7 @@ int main(void) {
         printf("Before Grade 1\n");
     } else if (CLI > 16) {
         printf("Grade 16+\n");
-    } else printf("Grade %i\n", CLI);
+    } else printf("Grade %f\n", CLI);
     return 0;
 }
 
