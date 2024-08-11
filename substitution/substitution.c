@@ -19,6 +19,7 @@ int main(int argc, string argv[]) {
             if(letters[i][i] == '0') {
                 letters[i][i] = argv[i][i];
             } else if(argv[i][i] == '\0') {
+                
             } else return 1;
         }
         plainTxt = get_string("plaintext:  ");
