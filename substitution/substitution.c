@@ -4,7 +4,7 @@
 #include <cs50.h>
 
 int main(int argc, string argv[]) {
-    
+    char letters[26] = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
     string plainTxt;
     string cipherTxt;
     if(argc != 2) {
@@ -14,7 +14,7 @@ int main(int argc, string argv[]) {
         printf("Key must contain 26 characters.\n");
         return 1;
     } else {
-
+        for(int i = 0; argv[i][i] != '\0'; i++)
         plainTxt = get_string("plaintext:  ");
         cipherTxt = plainTxt;
         for(int i = 0; plainTxt[i] != '\0'; i++) {
