@@ -10,11 +10,15 @@ int main(void) {
     string pl2 = get_string("Player 2: ");
     for(int i = 0, j = strlen(pl1); i < j; i++) {
         pl1[i] = toupper(pl1[i]);
-        plScore[0] += scores[pl1[i]-65];
+        if (pl1[i] > 64 && pl1[i] < 91) {
+            plScore[0] += scores[pl1[i]-65];
+        }
     }
     for(int i = 0, j = strlen(pl2); i < j; i++) {
         pl2[i] = toupper(pl2[i]);
-        plScore[1] += scores[pl2[i]-65];
+        if (pl2[i] > 64 && pl2[i] < 91) {
+            plScore[1] += scores[pl2[i]-65];
+        }
     }
     if (plScore[0] > plScore[1]) {
         printf("Player 1 wins!\n");
