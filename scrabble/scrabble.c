@@ -10,14 +10,13 @@ int main(void) {
     string pl2 = get_string("Player 2: ");
     for(int i = 0, j = strlen(pl1); i < j; i++) {
         pl1[i] = toupper(pl1[i]);
-        for(int k = 0; k < 26; k++) {
-            if (pl1[i]-65 == scores[])
-        }
+        plScore[0] += scores[pl1[i]-65];
     }
     for(int i = 0, j = strlen(pl2); i < j; i++) {
         pl2[i] = toupper(pl2[i]);
+        plScore[1] += scores[pl2[i]-65];
     }
-    printf("%s\n", pl1);
-    printf("%s\n", pl2);
+    printf("%i\n", plScore[0]);
+    printf("%i\n", plScore[1]);
     return 0;
 }
