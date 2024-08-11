@@ -17,8 +17,8 @@ int main(int argc, string argv[]) {
     } else {
         for(int i = 0; argv[i][i] != '\0'; i++) {
             if(letters[i][i] == '0') {
-                
-            }
+                letters[i][i] = argv[i][i];
+            } else return 1;
         }
         plainTxt = get_string("plaintext:  ");
         cipherTxt = plainTxt;
