@@ -19,6 +19,7 @@ int main(void) {
             sent++;
         }
     }
+    words++;
     printf("l: %i - w: %i - s: %i\n", letters, words, sent);
     CLI = 0.0588 * averageBy100(letters, words) - 0.296 * averageBy100(sent, words) - 15.8;
     if (CLI < 1) {
