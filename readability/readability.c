@@ -12,7 +12,9 @@ int main(void) {
             letters++;
         } else if(text[i] == ' ') {
             words++;
-        } else sent++;
+        } else if(text[i] == '.' || text[i] == '!' || text[i] == '?') {
+            sent++;
+        }
     }
     return 0;
 }
