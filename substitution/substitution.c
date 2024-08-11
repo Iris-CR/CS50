@@ -17,10 +17,11 @@ int main(int argc, string argv[]) {
         for(int i = 0; plainTxt[i] != '\0'; i++) {
             if(isalpha(plainTxt[i])) {
                 if(isupper(plainTxt[i])) {
-                    cypherTxt[i] = toupper(argv[1][plainTxt[i-65]]);
-                } else cypherTxt[i] = tolower(argv[1][plainTxt[i-65]]);
+                    cypherTxt[i] = toupper(argv[1][plainTxt[i]-65]);
+                } else cypherTxt[i] = tolower(argv[1][plainTxt[i]-65]);
             } else cypherTxt[i] = plainTxt[i];
         }
+        cypherTxt[strlen(plainTxt)] = '\0';
         printf("cyphertext: %s\n", cypherTxt);
     }
     return 0;
