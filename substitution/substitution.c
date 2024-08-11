@@ -5,7 +5,7 @@
 
 int main(int argc, string argv[]) {
     string plainTxt;
-    string cypherTxt;
+    string cipherTxt;
     if(argc != 2) {
         printf("Usage: ./substitution key\n");
         return 1;
@@ -14,15 +14,15 @@ int main(int argc, string argv[]) {
         return 1;
     } else {
         plainTxt = get_string("plaintext:  ");
-        cypherTxt = plainTxt;
+        cipherTxt = plainTxt;
         for(int i = 0; plainTxt[i] != '\0'; i++) {
             if(isalpha(plainTxt[i])) {
                 if(isupper(plainTxt[i])) {
-                    cypherTxt[i] = toupper(argv[1][plainTxt[i]-65]);
-                } else cypherTxt[i] = tolower(argv[1][plainTxt[i]-97]);
-            } else cypherTxt[i] = plainTxt[i];
+                    cipherTxt[i] = toupper(argv[1][plainTxt[i]-65]);
+                } else cipherTxt[i] = tolower(argv[1][plainTxt[i]-97]);
+            } else cipherTxt[i] = plainTxt[i];
         }
-        printf("cyphertext: %s\n", cypherTxt);
+        printf("ciphertext: %s\n", cipherTxt);
     }
     return 0;
 }
