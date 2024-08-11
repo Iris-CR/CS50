@@ -9,6 +9,7 @@ int main(void) {
     string pl2 = get_string("Player 2: ");
     for(int i = 0, j = strlen(pl1); i < j; i++) {
         pl1[i] = toupper(pl1[i]);
+        pl1[i]-65
     }
     for(int i = 0, j = strlen(pl2); i < j; i++) {
         pl2[i] = toupper(pl2[i]);
