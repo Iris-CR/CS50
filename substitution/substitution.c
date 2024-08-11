@@ -3,6 +3,7 @@
 #include <cs50.h>
 
 int main(int argc, string argv[]) {
+    string plainTxt;
     if(argc != 2) {
         printf("Usage: ./substitution key\n");
         return 1;
@@ -10,7 +11,8 @@ int main(int argc, string argv[]) {
         printf("Key must contain 26 characters.\n");
         return 1;
     } else {
-        printf("Correct\n");
+        plainTxt = get_string("plaintext:  ");
+        printf("cyphertext: %s\n", plainTxt);
     }
     return 0;
 }
