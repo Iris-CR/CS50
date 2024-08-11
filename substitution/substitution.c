@@ -16,13 +16,13 @@ int main(int argc, string argv[]) {
         printf("Key must contain 26 characters.\n");
         return 1;
     } else {
-        for(int i = 0; argv[i][i] != '\0'; i++) {
-            if(letters[i][i] != '0') {
+        for(int i = 0; argv[1][i] != '\0'; i++) {
+            if(letters[i][1] != '0') {
+                printf("%c\n", letters[i][1]);
                 return 1;
-            } else if(argv[i][i] == '\0') {
-                break;
             } else {
-                letters[i][i] = argv[i][i];
+                printf("%c\n", argv[1][i]);
+                letters[i][1] = argv[1][i];
             }
         }
     }
