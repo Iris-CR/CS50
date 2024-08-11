@@ -1,9 +1,11 @@
 #include <stdio.h>
 #include <string.h>
+#include <ctype.h>
 #include <cs50.h>
 
 int main(int argc, string argv[]) {
     string plainTxt;
+    string cypherTxt;
     if(argc != 2) {
         printf("Usage: ./substitution key\n");
         return 1;
@@ -12,7 +14,12 @@ int main(int argc, string argv[]) {
         return 1;
     } else {
         plainTxt = get_string("plaintext:  ");
-        printf("cyphertext: %s\n", plainTxt);
+        for(int i = 0; plainTxt[i] != '\0'; i++) {
+            if(isalpha(plainTxt[i])) {
+                
+            }
+        }
+        printf("cyphertext: %s\n", cypherTxt);
     }
     return 0;
 }
