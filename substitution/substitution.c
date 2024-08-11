@@ -17,11 +17,13 @@ int main(int argc, string argv[]) {
         return 1;
     } else {
         for(int i = 0; argv[i][i] != '\0'; i++) {
-            if(letters[i][i] == '0') {
-                letters[i][i] = argv[i][i];
+            if(letters[i][i] != '0') {
+                return 1;
             } else if(argv[i][i] == '\0') {
                 break;
-            } else return 1;
+            } else {
+                letters[i][i] = argv[i][i];
+            }
         }
     }
 
