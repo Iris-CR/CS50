@@ -16,6 +16,7 @@ int main(void) {
         } else if(text[i] == ' ') {
             words++;
         } else if(text[i] == '.' || text[i] == '!' || text[i] == '?') {
+            words++;
             sent++;
         }
     }
