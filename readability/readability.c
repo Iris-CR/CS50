@@ -18,5 +18,10 @@ int main(void) {
         }
     }
     CLI = 0.0588 * letters/(words*100) - 0.296 * sent/(words*100) - 15.8;
+    if (CLI < 1) {
+        printf("Before Grade 1\n");
+        return 0;
+    }
+    printf("Grade %i\n", CLI);
     return 0;
 }
