@@ -16,7 +16,10 @@ int main(void) {
         pl2[i] = toupper(pl2[i]);
         plScore[1] += scores[pl2[i]-65];
     }
-    printf("%i\n", plScore[0]);
-    printf("%i\n", plScore[1]);
+    if (plScore[0] > plScore[1]) {
+        printf("Player 1 wins!\n");
+    } else if (plScore[0] < plScore[1]) {
+        printf("Player 2 wins!\n");
+    } else printf("Tie!\n");
     return 0;
 }
