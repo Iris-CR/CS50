@@ -12,7 +12,9 @@ int main(int argc, string argv[]) {
     } else if(strlen(argv[1]) != 26) {
         printf("Key must contain 26 characters.\n");
         return 1;
-    } else {
+    } else if(){
+        
+    }else {
         plainTxt = get_string("plaintext:  ");
         cipherTxt = plainTxt;
         for(int i = 0; plainTxt[i] != '\0'; i++) {
