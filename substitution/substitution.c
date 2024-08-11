@@ -23,7 +23,7 @@ int main(int argc, string argv[]) {
             if(letters[1][toupper(argv[1][i])-65] != '0') {
                 return 1;
             } else {
-                letters[1][1] = argv[1][i];
+                letters[1][toupper(argv[1][i])-65] = argv[1][i];
             }
         }
     }
