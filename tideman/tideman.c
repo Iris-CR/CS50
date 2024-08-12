@@ -202,7 +202,7 @@ void lock_pairs(void)
             max_locks++;
         }
     }
-    if (max_locks == pair_count)
+    if (max_locks == pair_count - 1)
     {
         locked[pair_count][pair_count] = false;
     }
