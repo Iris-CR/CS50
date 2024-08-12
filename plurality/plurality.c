@@ -86,6 +86,7 @@ void print_winner(void)
         if (candidates[j].votes > winners[0][0])
         {
             winners[0][0] = candidates[j].votes;
+            winners[1][]
         }
     }
     return;
