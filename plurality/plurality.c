@@ -20,7 +20,7 @@ int candidate_count;
 
 // Function prototypes
 bool vote(string name);
-void print_winner(void);
+void print_winner(int cc, candidate cand[]);
 
 int main(int argc, string argv[])
 {
@@ -59,7 +59,7 @@ int main(int argc, string argv[])
     }
 
     // Display winner of election
-    print_winner(candidate_count, );
+    print_winner(candidate_count, candidates);
 }
 
 // Update vote totals given a new vote
@@ -77,7 +77,7 @@ bool vote(string name)
 }
 
 // Print the winner (or winners) of the election
-void print_winner(int cc, candidate cand)
+void print_winner(int cc, candidate cand[])
 {
     int winners[cc][2];
     winners[0][0] = 0;
@@ -93,6 +93,7 @@ void print_winner(int cc, candidate cand)
             winners[j][1] = j;
         }
     }
+    
     printf("%s\n", cand[0].name);
     for (int j = 1; j < cc; j++)
     {
