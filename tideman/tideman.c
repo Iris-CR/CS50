@@ -90,19 +90,7 @@ int main(int argc, string argv[])
     }
 
     add_pairs();
-    for (int i = 0; i < candidate_count; i++)
-    {
-        for (int j = 0; j < candidate_count; j++)
-        {
-            printf("|%i| ", preferences[i][j]);
-        }
-        printf("\n");
-    }
     sort_pairs();
-    for (int i = 0; i < pair_count; i++)
-    {
-        printf("Winner: %i - Loser: %i\n", pairs[i].winner, pairs[i].loser);
-    }
     lock_pairs();
     print_winner();
     return 0;
@@ -177,7 +165,6 @@ void sort_pairs(void)
             {
                 diff = preferences[pairs[j].winner][pairs[j].loser] - preferences[pairs[j].loser][pairs[j].winner];
                 pos = j;
-                printf("%i\n", diff);
             }
         }
         if (diff != 0)
