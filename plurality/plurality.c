@@ -93,13 +93,13 @@ void print_winner(int cc, candidate cand[])
             winners[j][1] = j;
         }
     }
-    
-    printf("%s\n", cand[0].name);
+
+    printf("%s\n", cand[winners[0][1]].name);
     for (int j = 1; j < cc; j++)
     {
         if(winners[j][0] == winners[0][0])
         {
-            printf("%s\n", cand[j].name);
+            printf("%s\n", cand[winners[j][1]].name);
         }
     }
     return;
