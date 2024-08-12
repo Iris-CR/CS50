@@ -20,7 +20,7 @@ int candidate_count;
 
 // Function prototypes
 bool vote(string name);
-void print_winner(int cc, candidate cand[]);
+void print_winner(void);
 
 int main(int argc, string argv[])
 {
@@ -59,7 +59,7 @@ int main(int argc, string argv[])
     }
 
     // Display winner of election
-    print_winner(candidate_count, candidates);
+    print_winner();
 }
 
 // Update vote totals given a new vote
@@ -77,29 +77,29 @@ bool vote(string name)
 }
 
 // Print the winner (or winners) of the election
-void print_winner(int cc, candidate cand[])
+void print_winner(void)
 {
-    int winners[cc][2];
+    int winners[MAX][2];
     winners[0][0] = 0;
-    for (int j = 0; j < cc; j++)
+    for (int j = 0; j < MAX; j++)
     {
-        if (cand[j].votes > winners[0][0])
+        if (candidates[j].votes > winners[0][0])
         {
-            winners[0][0] = cand[j].votes; // Votes
+            winners[0][0] = candidates[j].votes; // Votes
             winners[0][1] = j; // Index
-        } else if (cand[j].votes == winners[0][0])
+        } else if (candidates[j].votes == winners[0][0])
         {
-            winners[j][0] = cand[j].votes;
+            winners[j][0] = candidates[j].votes;
             winners[j][1] = j;
         }
     }
 
-    printf("%s\n", cand[winners[0][1]].name);
-    for (int j = 1; j < cc; j++)
+    printf("%s\n", candidates[winners[0][1]].name);
+    for (int j = 1; j < MAX; j++)
     {
         if(winners[j][0] == winners[0][0])
         {
-            printf("%s\n", cand[winners[j][1]].name);
+            printf("%s\n", candidates[winners[j][1]].name);
         }
     }
     return;
