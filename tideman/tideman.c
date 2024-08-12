@@ -236,6 +236,10 @@ void print_winner(void)
                 lock_count++;
             }
         }
+        if (lock_count == 0)
+        {
+            printf("%s\n", candidates[i]);
+        }
     }
     return;
 }
