@@ -129,7 +129,7 @@ void add_pairs(void)
     int winner, loser;
     for (int i = 0; i < candidate_count; i++)
     {
-        for (int j = 0; j < candidate_count; j++)
+        for (int j = i; j < candidate_count; j++)
         {
             winner = preferences[i][j];
             loser = preferences[j][i];
