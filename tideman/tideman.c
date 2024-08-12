@@ -201,10 +201,15 @@ void lock_pairs(void)
 
     for (int i = 0; i < pair_count; i++)
     {
+        lock_count = 0;
         for (int j = 0; j < pair_count; j++)
         {
-            locked[j][i]
+            if (locked[j][i] == false)
+            {
+                lock_count++;
+            }
         }
+        if
     }
     return;
 }
