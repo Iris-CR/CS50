@@ -127,9 +127,9 @@ void record_preferences(int ranks[])
 void add_pairs(void)
 {
     int winner, loser;
-    for (int i = 0; i < candidate_count; i++)
+    for (int i = 0; i < (candidate_count * (candidate_count - 1) / 2); i++)
     {
-        for (int j = i; j < candidate_count; j++)
+        for (int j = i; j < (candidate_count * (candidate_count - 1) / 2); j++)
         {
             winner = preferences[i][j];
             loser = preferences[j][i];
