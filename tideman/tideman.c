@@ -165,7 +165,7 @@ void sort_pairs(void)
         pos = 0;
         for (int j = 0; j < pair_count; j++)
         {
-            if (diff < pairs[j].winner - pairs[j].loser)
+            if (diff < (pairs[j].winner - pairs[j].loser))
             {
                 diff = pairs[j].winner - pairs[j].loser;
                 pos = j;
