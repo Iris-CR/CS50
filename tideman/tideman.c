@@ -140,8 +140,8 @@ void add_pairs(void)
             }
             if (winner != loser)
             {
-                pairs[i].winner = winner;
-                pairs[i].loser = loser;
+                pairs[i].winner = i;
+                pairs[i].loser = j;
                 pair_count++;
             }
         }
