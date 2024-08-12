@@ -89,14 +89,15 @@ int main(int argc, string argv[])
             }
         }
 
-        for (int j = 0; j < candidate_count; j++) {
-            printf("%i\n", ranks[j]);
-        }
         record_preferences(ranks);
 
         printf("\n");
     }
 
+        for (int j = 0; j < candidate_count; j++) {
+            printf("%i\n", ranks[j]);
+        }
+        
     add_pairs();
     sort_pairs();
     lock_pairs();
