@@ -91,6 +91,10 @@ int main(int argc, string argv[])
 
     add_pairs();
     sort_pairs();
+    for (int i = 0; i < pairs_count; i++)
+    {
+        printf("Winner: %i - Loser: %i\n", pairs[i].winner, pairs[i].loser);
+    }
     lock_pairs();
     print_winner();
     return 0;
@@ -154,7 +158,7 @@ void sort_pairs(void)
 {
     int diff;
     int pos;
-    pair s
+    pair swap;
     for (int i = 0; i < pair_count; i++)
     {
         diff = 0;
@@ -167,7 +171,9 @@ void sort_pairs(void)
                 pos = j;
             }
         }
-
+        swap = pairs[i];
+        pairs[i] = pairs[j];
+        pairs[pos] = swap;
     }
     return;
 }
