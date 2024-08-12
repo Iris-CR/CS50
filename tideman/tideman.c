@@ -200,7 +200,7 @@ void lock_pairs(void)
             max_locks++;
         }
     }
-    if (max_locks >= pair_count - 1)
+    if (max_locks == pair_count)
     {
         locked[pairs[pair_count-1].winner][pairs[pair_count-1].loser] = false;
     }
