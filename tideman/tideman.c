@@ -115,7 +115,7 @@ void record_preferences(int ranks[])
 {
     for (int j = 0; j < candidate_count; j++)
     {
-        for (int k = j+1; k < candidate_count; k++)
+        for (int k = j + 1; k < candidate_count; k++)
         {
             preferences[ranks[j]][ranks[k]]++;
         }
@@ -159,9 +159,11 @@ void sort_pairs(void)
         pos = 0;
         for (int j = i; j < pair_count; j++)
         {
-            if (diff < (preferences[pairs[j].winner][pairs[j].loser] - preferences[pairs[j].loser][pairs[j].winner]))
+            if (diff < (preferences[pairs[j].winner][pairs[j].loser] -
+                        preferences[pairs[j].loser][pairs[j].winner]))
             {
-                diff = preferences[pairs[j].winner][pairs[j].loser] - preferences[pairs[j].loser][pairs[j].winner];
+                diff = preferences[pairs[j].winner][pairs[j].loser] -
+                       preferences[pairs[j].loser][pairs[j].winner];
                 pos = j;
             }
         }
@@ -170,7 +172,9 @@ void sort_pairs(void)
             swap = pairs[i];
             pairs[i] = pairs[pos];
             pairs[pos] = swap;
-        } else return;
+        }
+        else
+            return;
     }
     return;
 }
