@@ -179,9 +179,12 @@ void sort_pairs(void)
                 pos = j;
             }
         }
-        swap = pairs[i];
-        pairs[i] = pairs[pos];
-        pairs[pos] = swap;
+        if (diff != 0)
+        {
+            swap = pairs[i];
+            pairs[i] = pairs[pos];
+            pairs[pos] = swap;
+        } else return;
     }
     return;
 }
