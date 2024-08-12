@@ -88,6 +88,14 @@ int main(int argc, string argv[])
 
         printf("\n");
     }
+    for (int i = 0; i < candidate_count; i++)
+    {
+        for (int j = 0; j < candidate_count; j++)
+        {
+            printf("%i ", preferences[i][j]);
+        }
+        printf("\n");
+    }
 
     add_pairs();
     sort_pairs();
@@ -113,9 +121,12 @@ bool vote(int rank, string name, int ranks[])
 // Update preferences given one voter's ranks
 void record_preferences(int ranks[])
 {
-    for (int i = 0; i < candidate_count; i++)
+    for (int j = 0; j < candidate_count; j++)
     {
-        preferences[ranks[i]][]
+        for (int k = j+1; k < candidate_count; k++)
+        {
+            preferences[ranks[j]][ranks[k]]++;
+        }
     }
     return;
 }
