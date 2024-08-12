@@ -90,7 +90,7 @@ int main(int argc, string argv[])
     }
 
     add_pairs();
-    for (int i = 0; i < (candidate_count * (candidate_count - 1) / 2); i++)
+    for (int i = 0; i < pair_count; i++)
     {
         printf("Winner: %i - Loser: %i\n", pairs[i].winner, pairs[i].loser);
     }
