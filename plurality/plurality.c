@@ -65,7 +65,7 @@ int main(int argc, string argv[])
 // Update vote totals given a new vote
 bool vote(string name)
 {
-    for (int j = 0; j < MAX; j++)
+    for (int j = 0; j < candidate_count; j++)
     {
         if (strcmp(candidates[j].name, name) == 0)
         {
@@ -79,15 +79,16 @@ bool vote(string name)
 // Print the winner (or winners) of the election
 void print_winner(void)
 {
-    int winners[MAX][2];
+    int winners[candidate_count][2];
     winners[0][0] = 0;
-    for (int j = 0; j < MAX; j++)
+    for (int j = 0; j < candidate_count; j++)
     {
         if (candidates[j].votes > winners[0][0])
         {
             winners[0][0] = candidates[j].votes; // Votes
-            winners[0][1] = j; // Index
-        } else if (candidates[j].votes == winners[0][0])
+            winners[0][1] = j;                   // Index
+        }
+        else if (candidates[j].votes == winners[0][0])
         {
             winners[j][0] = candidates[j].votes;
             winners[j][1] = j;
@@ -95,9 +96,9 @@ void print_winner(void)
     }
 
     printf("%s\n", candidates[winners[0][1]].name);
-    for (int j = 1; j < MAX; j++)
+    for (int j = 1; j < candidate_count; j++)
     {
-        if(winners[j][0] == winners[0][0])
+        if (winners[j][0] == winners[0][0])
         {
             printf("%s\n", candidates[winners[j][1]].name);
         }
