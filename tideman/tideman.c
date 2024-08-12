@@ -209,7 +209,10 @@ void lock_pairs(void)
                 lock_count++;
             }
         }
-        if
+        if (lock_count != 0)
+        {
+            
+        }
     }
     return;
 }
