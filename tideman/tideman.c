@@ -90,8 +90,15 @@ int main(int argc, string argv[])
     }
 
     add_pairs();
+    for (int i = 0; i < candidate_count; i++)
+    {
+        for (int j = 0; j < candidate_count; j++)
+        {
+            printf("|%i| ", preferences[i][j]);
+        }
+        printf("\n");
+    }
     sort_pairs();
-    printf("%i %i")
     for (int i = 0; i < pair_count; i++)
     {
         printf("Winner: %i - Loser: %i\n", pairs[i].winner, pairs[i].loser);
