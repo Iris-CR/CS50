@@ -8,4 +8,4 @@ How do you know?: It`s the fastest overall.
 
 sort3 uses: Selected Sort
 
-How do you know?: TODO
+How do you know?: It isn't the fastest, nor the slowest; it maintains consistency in the tests.
