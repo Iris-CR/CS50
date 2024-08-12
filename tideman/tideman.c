@@ -193,6 +193,7 @@ void sort_pairs(void)
 // Lock pairs into the candidate graph in order, without creating cycles
 void lock_pairs(void)
 {
+    int max_locks = 0;
     int lock_count;
     for (int i = 0; i < pair_count; i++)
     {
@@ -204,15 +205,19 @@ void lock_pairs(void)
         lock_count = 0;
         for (int j = 0; j < pair_count; j++)
         {
-            if (locked[j][i] == false)
+            if (locked[j][i] == true)
             {
                 lock_count++;
             }
         }
         if (lock_count != 0)
         {
-            
+            max_locks++;
         }
+    }
+    if (max_locks == pair_count)
+    {
+        locked[pair_count][pair_count] = false;
     }
     return;
 }
