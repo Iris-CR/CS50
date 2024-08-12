@@ -173,9 +173,9 @@ void sort_pairs(void)
         pos = 0;
         for (int j = i; j < pair_count; j++)
         {
-            if (diff < (preferences[pairs[i].winner] - pairs[j].loser))
+            if (diff < (preferences[pairs[i].winner][pairs[j].loser] - preferences[pairs[i].loser][pairs[j].winner]))
             {
-                diff = pairs[j].winner - pairs[j].loser;
+                diff = preferences[pairs[i].winner][pairs[j].loser] - preferences[pairs[i].loser][pairs[j].winner];
                 pos = j;
                 printf("%i\n", diff);
             }
