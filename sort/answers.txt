@@ -2,9 +2,9 @@ sort1 uses: Bubble Sort
 
 How do you know?: It thrives in an sorted array.
 
-sort2 uses: TODO
+sort2 uses: Merge Sort
 
-How do you know?: TODO
+How do you know?: Its the fasted overall.
 
 sort3 uses: TODO
 
