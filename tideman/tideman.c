@@ -177,6 +177,7 @@ void sort_pairs(void)
             {
                 diff = pairs[j].winner - pairs[j].loser;
                 pos = j;
+                printf("%i\n", diff);
             }
         }
         if (diff != 0)
