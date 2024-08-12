@@ -84,6 +84,9 @@ int main(int argc, string argv[])
             }
         }
 
+        for (int j = 0; j < candidate_count; j++) {
+            printf("%i\n", ranks[j]);
+        }
         record_preferences(ranks);
 
         printf("\n");
@@ -106,8 +109,8 @@ bool vote(int rank, string name, int ranks[])
             ranks[rank]++;
             return true;
         }
-        return false;
     }
+    return false;
 }
 
 // Update preferences given one voter's ranks
