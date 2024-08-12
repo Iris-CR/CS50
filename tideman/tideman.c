@@ -63,19 +63,14 @@ int main(int argc, string argv[])
         }
     }
 
-    // ranks[i] is voter's ith preference
-    int ranks[candidate_count];
-    for (int i = 0; i < candidate_count; i++)
-    {
-        ranks[i] = 0;
-    }
-
     pair_count = 0;
     int voter_count = get_int("Number of voters: ");
 
     // Query for votes
     for (int i = 0; i < voter_count; i++)
     {
+        // ranks[i] is voter's ith preference
+        int ranks[candidate_count];
 
         // Query for each rank
         for (int j = 0; j < candidate_count; j++)
@@ -94,10 +89,6 @@ int main(int argc, string argv[])
         printf("\n");
     }
 
-        for (int j = 0; j < candidate_count; j++) {
-            printf("%i\n", ranks[j]);
-        }
-        
     add_pairs();
     sort_pairs();
     lock_pairs();
