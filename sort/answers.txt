@@ -1,10 +1,10 @@
 sort1 uses: Bubble Sort
 
-How do you know?: It thrives in an sorted array.
+How do you know?: It thrives in an sorted array. But is very slow at bigger random values.
 
 sort2 uses: Merge Sort
 
-How do you know?: Its the fasted overall.
+How do you know?: Its the fastest overall.
 
 sort3 uses: Selected Sort
 
