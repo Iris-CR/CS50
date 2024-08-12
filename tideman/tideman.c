@@ -179,10 +179,11 @@ void sort_pairs(void)
 void lock_pairs(void)
 {
     int max_locks = 0;
-    int lock_count;
+    int lock_count, x, y;
     for (int i = 0; i < pair_count; i++)
     {
         locked[pairs[i].winner][pairs[i].loser] = true;
+        x = 
     }
 
     for (int i = 0; i < pair_count; i++)
