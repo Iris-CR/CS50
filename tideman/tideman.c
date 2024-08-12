@@ -194,7 +194,7 @@ void sort_pairs(void)
 void lock_pairs(void)
 {
     int lock_count;
-    for (int i = 0; i < (pair_count - 1); i++)
+    for (int i = 0; i < pair_count; i++)
     {
         locked[pairs[i].winner][pairs[i].loser] = true;
     }
