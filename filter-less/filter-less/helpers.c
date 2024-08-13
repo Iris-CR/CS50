@@ -34,6 +34,9 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
             sepiaGreen = .349 * image[y][x].rgbtRed + .686 * image[y][x].rgbtGreen + .168 * image[y][x].rgbtBlue ;
             sepiaBlue = .272 * image[y][x].rgbtRed + .534 * image[y][x].rgbtGreen + .131 * image[y][x].rgbtBlue ;
 
+            image[y][x].rgbtBlue = round(sepiaBlue);
+            image[y][x].rgbtGreen = round(sepiaGreen);
+            image[y][x].rgbtRed = round(sepiaRed);
         }
     }
     return;
