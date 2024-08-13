@@ -28,6 +28,11 @@ int main(int argc, char *argv[])
                 FILE *out = fopen(outName, "wb");
                 fwrite(&buffer, sizeof(buffer), 1, out)
             }
+            else if (img != 0)
+            {
+                fclose(outName);
+                imgCount++;
+            }
         }
     }
 }
