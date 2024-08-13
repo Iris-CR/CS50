@@ -26,12 +26,14 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
 void sepia(int height, int width, RGBTRIPLE image[height][width])
 {
     float sepiaRed, sepiaGreen, sepiaBlue;
-    int ogRed, ogGreen, ogBlue;
     for (int y = 0; y < height; y++)
     {
         for (int x = 0; x < width; x++)
         {
+            ogBle = image[y][x].rgbtBlue;
+            ogGreen = image[y][x].rgbtGreen;
             ogRed = image[y][x].rgbtRed;
+
         }
     }
     return;
