@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdint.h>
 
 typedef uint8_t BYTE;
 
@@ -12,7 +13,7 @@ int main(int argc, char *argv[])
     FILE *infile = fopen(fileName, "rb");
     if (infile == NULL)
     {
-        printf("Could not open %s.\n", infile);
+        printf("Could not open %s.\n", fileName);
         return 2;
     }
     BYTE buffer[512];
@@ -26,15 +27,15 @@ int main(int argc, char *argv[])
             if (imgCount == 0)
             {
                 sprintf(outName, "%03i.png", imgCount);
-                *out = fopen(outName, "wb");
+                out = fopen(outName, "wb");
                 fwrite(&buffer, sizeof(buffer), 1, out);
             }
             else if (imgCount != 0)
             {
-                fclose(outName);
+                fclose(out);
                 imgCount++;
                 sprintf(outName, "%03i.png", imgCount);
-                *out = fopen(outName, "wb");
+                out = fopen(outName, "wb");
                 fwrite(&buffer, sizeof(buffer), 1, out);
             }
         }
@@ -43,6 +44,6 @@ int main(int argc, char *argv[])
             fwrite(&buffer, sizeof(buffer), 1, out);
         }
     }
-    fclose(outName);
+    fclose(out);
     imgCount++;
 }
