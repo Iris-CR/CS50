@@ -60,15 +60,15 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
         {
             temp = image[y][x].rgbtRed;
             image[y][x].rgbtRed = image[y][width-x].rgbtRed;
-            image[y][x].rgbtRed = temp;
+            image[y][width-x].rgbtRed = temp;
 
             temp = image[y][x].rgbtGreen;
             image[y][x].rgbtGreen = image[y][width-x].rgbtGreen;
-            image[y][x].rgbtGreen = temp;
+            image[y][width-x].rgbtGreen = temp;
 
             temp = image[y][x].rgbtBlue;
             image[y][x].rgbtBlue = image[y][width-x].rgbtBlue;
-            image[y][x].rgbtBlue = temp;
+            image[y][width-x].rgbtBlue = temp;
         }
     }
     return;
