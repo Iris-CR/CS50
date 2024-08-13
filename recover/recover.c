@@ -35,10 +35,10 @@ int main(int argc, char *argv[])
             else if (imgCount != 0)
             {
                 fclose(out);
-                imgCount++;
                 sprintf(outName, "%03i.jpg", imgCount);
                 out = fopen(outName, "wb");
                 fwrite(&buffer, sizeof(buffer), 1, out);
+                imgCount++;
             }
         }
         else if (imgCount != 0)
