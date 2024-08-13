@@ -18,8 +18,8 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
             image[y][x].rgbtBlue = round(av);
             image[y][x].rgbtGreen = round(av);
             image[y][x].rgbtRed = round(av);
+            av = 0;
         }
-        av = 0;
     }
     return;
 }
