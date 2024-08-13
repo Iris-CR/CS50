@@ -100,12 +100,14 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 {
                     if (y-1+h > 0 || y-1+h < height || x-1+w > 0 || x-1+w < width)
                     {
-                        sum += copy[y-1+h][x-1+w];
+                        sum += copy[y-1+h][x-1+w].rgbtRed;
+                        sum += copy[y-1+h][x-1+w].rgbtGreen;
+                        sum += copy[y-1+h][x-1+w].rgbtBlue;
                         i++;
                     }
                 }
             }
-        sum /= i;
+        sum /= i*3;
         image[y][x]
         }
     }
