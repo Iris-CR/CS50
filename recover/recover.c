@@ -18,9 +18,9 @@ int main(int argc, char *argv[])
     BYTE buffer[512];
     while (fread(&buffer, sizeof(buffer), 1, infile))
     {
-        if ()
+        if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && ())
         {
-            buffer[0] ==
+
         }
     }
 }
