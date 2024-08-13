@@ -17,7 +17,8 @@ int main(int argc, char *argv[])
     }
     BYTE buffer[512];
     int imgCount = 0;
-    char *outName ;
+    char outName[8];
+    sprintf(outName, "%03i.png", imgCount)
     FILE *out = fopen()
     while (fread(&buffer, sizeof(buffer), 1, infile))
     {
