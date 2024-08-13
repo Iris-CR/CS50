@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
                 *out = fopen(outName, "wb");
                 fwrite(&buffer, sizeof(buffer), 1, out);
             }
-            else if (img != 0)
+            else if (imgCount != 0)
             {
                 fclose(outName);
                 imgCount++;
@@ -37,6 +37,10 @@ int main(int argc, char *argv[])
                 *out = fopen(outName, "wb");
                 fwrite(&buffer, sizeof(buffer), 1, out);
             }
+        }
+        else if (imgCount != 0)
+        {
+            fwrite(&buffer, sizeof(buffer), 1, out);
         }
     }
 }
