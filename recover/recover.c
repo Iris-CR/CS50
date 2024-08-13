@@ -1,12 +1,13 @@
+#include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdint.h>
 
 typedef uint8_t BYTE;
 
 int main(int argc, char *argv[])
 {
-    if (argc != 2) {
+    if (argc != 2)
+    {
         printf("Usage: ./recover rawfile\n");
         return 1;
     }
@@ -23,7 +24,8 @@ int main(int argc, char *argv[])
     FILE *out = NULL;
     while (fread(&buffer, sizeof(buffer), 1, infile))
     {
-        if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3]&0xf0) == 0xe0)
+        if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff &&
+            (buffer[3] & 0xf0) == 0xe0)
         {
             if (imgCount == 0)
             {
