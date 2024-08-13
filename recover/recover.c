@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
         {
             if (imgCount == 0)
             {
-                sprintf(outName, "%03i.png", imgCount);
+                sprintf(outName, "%03i.jpg", imgCount);
                 out = fopen(outName, "wb");
                 fwrite(&buffer, sizeof(buffer), 1, out);
             }
@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
             {
                 fclose(out);
                 imgCount++;
-                sprintf(outName, "%03i.png", imgCount);
+                sprintf(outName, "%03i.jpg", imgCount);
                 out = fopen(outName, "wb");
                 fwrite(&buffer, sizeof(buffer), 1, out);
             }
