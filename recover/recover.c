@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
         return 2;
     }
     BYTE buffer;
-    while (fread(&buffer, sizeof(buffer), 1, ))
+    while (fread(&buffer, sizeof(buffer), 1, infile))
     {
 
     }
