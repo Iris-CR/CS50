@@ -8,12 +8,12 @@ int main(int argc, char *argv[])
     if (argc != 2) {
         return 1;
     }
-    char *infile = argv[1];
-    FILE *f = fopen(s, "r");
-    if (f == NULL)
+    char *fileName = argv[1];
+    FILE *infile = fopen(fileName, "r");
+    if (infile == NULL)
     {
         printf("Could not open %s.\n", infile);
-        return 4;
+        return 2;
     }
     while (fread())
     {
