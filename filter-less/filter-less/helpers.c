@@ -31,7 +31,7 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int x = 0; x < width; x++)
         {
-            ogRed = 
+            ogRed = image[y][x].rgbtRed;
         }
     }
     return;
