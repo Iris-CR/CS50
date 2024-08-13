@@ -3,5 +3,9 @@
 
 int main(int argc, char *argv[])
 {
-    FILE *f = fopen("card.raw", "r");
+    if (argc != 2) {
+        return 1;
+    }
+    char *s = argv[1];
+    FILE *f = fopen(s, "r");
 }
