@@ -53,7 +53,7 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
 // Reflect image horizontally
 void reflect(int height, int width, RGBTRIPLE image[height][width])
 {
-    RGBTRIPLE temp[0][0] = malloc(sizeof(RGBTRIPLE));
+    RGBTRIPLE (*temp)[0] = malloc(sizeof(RGBTRIPLE));
     for (int y = 0; y < height; y++)
     {
         for (int x = 0; x < width/2; x++)
