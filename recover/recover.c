@@ -18,6 +18,7 @@ int main(int argc, char *argv[])
     BYTE buffer[512];
     int imgCount = 0;
     char outName[8];
+    FILE *out;
     while (fread(&buffer, sizeof(buffer), 1, infile))
     {
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && buffer[3] >= 0xe0 && buffer[3] <= 0xef)
@@ -25,13 +26,16 @@ int main(int argc, char *argv[])
             if (imgCount == 0)
             {
                 sprintf(outName, "%03i.png", imgCount);
-                FILE *out = fopen(outName, "wb");
-                fwrite(&buffer, sizeof(buffer), 1, out)
+                *out = fopen(outName, "wb");
+                fwrite(&buffer, sizeof(buffer), 1, out);
             }
             else if (img != 0)
             {
                 fclose(outName);
                 imgCount++;
+                sprintf(outName, "%03i.png", imgCount);
+                *out = fopen(outName, "wb");
+                fwrite(&buffer, sizeof(buffer), 1, out);
             }
         }
     }
