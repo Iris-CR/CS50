@@ -15,7 +15,8 @@ int main(int argc, char *argv[])
         printf("Could not open %s.\n", infile);
         return 2;
     }
-    while (fread())
+    BYTE buffer;
+    while (fread(&buffer, sizeof(buffer), 1, ))
     {
 
     }
