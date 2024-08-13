@@ -96,7 +96,11 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             {
                 for (int w; w < 3; w++)
                 {
-                    sum += copy[y][x]
+                    if (y-1+h < 0 || y-1+h > || x-1+w < 0 )
+                    {
+
+                    }
+                    sum += copy[y-1+h][x-1+w]
                 }
             }
         }
