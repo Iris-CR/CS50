@@ -89,6 +89,13 @@ unsigned int size(void)
 // Unloads dictionary from memory, returning true if successful, else false
 bool unload(void)
 {
-    
+
+    for (node *ptr = table[index]; ptr != NULL; ptr = ptr->next)
+    {
+        if (strcasecmp(word, ptr->word) == 0)
+        {
+            return true;
+        }
+    }
     return false;
 }
