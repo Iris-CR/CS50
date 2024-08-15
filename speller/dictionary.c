@@ -35,7 +35,7 @@ unsigned int hash(const char *word)
     h += toupper(word[1]) - 'A';
     if (h > N - 1)
     {
-        h %= n;
+        h %= N;
     }
     return h;
 }
@@ -50,7 +50,7 @@ bool load(const char *dictionary)
         return false;
     }
     char word[LENGTH + 1];
-    while(fscanf(file, "%s", word) != "EOF")
+    while(fscanf(dict, "%s", word) != "EOF")
     {
         node *n = malloc(sizeof(n));
         if (n == NULL)
