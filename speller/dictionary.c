@@ -65,6 +65,7 @@ bool load(const char *dictionary)
         node *n = malloc(sizeof(n));
         if (n == NULL)
         {
+            fclose(dict);
             return 1;
         }
         strcpy(n->word, word);
@@ -77,6 +78,7 @@ bool load(const char *dictionary)
         } else table[index] = n;
         S++;
     }
+    fclose(dict);
     return true;
 }
 
