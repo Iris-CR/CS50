@@ -50,6 +50,7 @@ bool load(const char *dictionary)
             return 1;
         }
         strcpy(n->word, word);
+        hash(n->word);
     }
 }
 
