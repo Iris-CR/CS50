@@ -2,7 +2,7 @@
 
 #include <ctype.h>
 #include <stdbool.h>
-
+#include <string.h>
 #include "dictionary.h"
 
 // Represents a node in a hash table
@@ -44,7 +44,7 @@ bool load(const char *dictionary)
     char word[LENGTH + 1];
     while(fscanf(file, "%s", word) != "EOF")
     {
-        
+
     }
 }
 
