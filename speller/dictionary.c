@@ -66,6 +66,7 @@ bool load(const char *dictionary)
             n->next = table[index];
             table[index] = n;
         } else table[index] = n;
+        S++;
     }
     return true;
 }
@@ -73,8 +74,7 @@ bool load(const char *dictionary)
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
 unsigned int size(void)
 {
-    // TODO
-    return 0;
+    return S;
 }
 
 // Unloads dictionary from memory, returning true if successful, else false
