@@ -5,3 +5,5 @@ while True:
     height = get_int("Height: ")
     if height > 0 and height < 9:
         break
+for i in range(height):
+    print()
