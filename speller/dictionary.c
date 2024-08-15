@@ -96,7 +96,8 @@ bool unload(void)
         while (ptr != NULL)
         {
             temp = ptr;
-            ptr;
+            ptr = ptr->next;
+            free(temp);
         }
     }
     return false;
