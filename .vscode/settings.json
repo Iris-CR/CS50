@@ -1,6 +1,7 @@
 {
     "gitdoc.enabled": true,
     "files.associations": {
-        "time.h": "c"
+        "time.h": "c",
+        "stdio.h": "c"
     }
 }
