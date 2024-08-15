@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <strings.h>
 #include "dictionary.h"
 
 // Represents a node in a hash table
@@ -24,7 +25,12 @@ node *table[N];
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
-    // TODO
+    int index;
+    index = hash(word);
+    for (node *ptr = table[i]; ptr != NULL; ptr = ptr->next)
+    {
+        strcasecmp(word, ptr->word)
+    }
     return false;
 }
 
