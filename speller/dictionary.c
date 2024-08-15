@@ -36,8 +36,8 @@ unsigned int hash(const char *word)
 bool load(const char *dictionary)
 {
     // TODO
-    dictionary = fopen(dictionary, "r");
-    if (dictionary == NULL)
+    FILE *dict = fopen(dictionary, "r");
+    if (dict == NULL)
     {
         return false;
     }
