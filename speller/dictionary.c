@@ -35,7 +35,7 @@ unsigned int hash(const char *word)
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
-    // TODO
+    int index;
     FILE *dict = fopen(dictionary, "r");
     if (dict == NULL)
     {
@@ -51,7 +51,11 @@ bool load(const char *dictionary)
         }
         strcpy(n->word, word);
         n->next = NULL;
-        table[hash(n->word)] = n;
+        index = hash(n->word);
+        if (table[index] != NULL)
+        {
+            
+        }
     }
 }
 
