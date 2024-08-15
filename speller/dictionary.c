@@ -49,7 +49,7 @@ bool load(const char *dictionary)
         {
             return 1;
         }
-        n->word = strcpy(word);
+        strcpy(n->word, word);
     }
 }
 
