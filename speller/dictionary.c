@@ -56,9 +56,12 @@ bool load(const char *dictionary)
         {
             for (node *ptr = table[index]; ptr != NULL; ptr = table[index]->next)
             {
-                
+                if (ptr->next == NULL)
+                {
+                    ptr->next = n;
+                }
             }
-        }
+        } else table[index] = n;
     }
 }
 
