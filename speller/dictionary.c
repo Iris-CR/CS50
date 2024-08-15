@@ -29,7 +29,10 @@ bool check(const char *word)
     index = hash(word);
     for (node *ptr = table[i]; ptr != NULL; ptr = ptr->next)
     {
-        strcasecmp(word, ptr->word)
+        if (strcasecmp(word, ptr->word) == 0)
+        {
+            return true;
+        }
     }
     return false;
 }
