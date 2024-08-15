@@ -54,7 +54,10 @@ bool load(const char *dictionary)
         index = hash(n->word);
         if (table[index] != NULL)
         {
-            
+            for (node *ptr = table[index]; ptr != NULL; ptr = table[index]->next)
+            {
+                
+            }
         }
     }
 }
