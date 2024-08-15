@@ -29,6 +29,8 @@ bool check(const char *word)
 unsigned int hash(const char *word)
 {
     unsigned int h = toupper(word[0]) - 'A';
+    h *= 26;
+    h += toupper(word[1]) - 'A';
     if (h > N - 1)
     {
         h %= n;
