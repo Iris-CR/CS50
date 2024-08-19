@@ -27,9 +27,9 @@ def main():
     # TODO: Check database for matching profiles
     for dna in dnas:
         for col in dna:
-            for string in strs:
-                if col == string:
-                    print(col)
+            for _ in range(0, strs.__len__()):
+                if col == strs[_]:
+                    print(values[_])
 
 
 
