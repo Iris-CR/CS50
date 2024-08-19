@@ -19,6 +19,7 @@ def main():
             strs.append(reader.fieldnames.__getitem__(col))
 
     # TODO: Read DNA sequence file into a variable
+    seqfile = open(sys.argv[2], 'r')
 
     # TODO: Find longest match of each STR in DNA sequence
 
