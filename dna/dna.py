@@ -14,8 +14,6 @@ def main():
         header = csv.DictReader(fdb)
         for row in header:
             dnas.append(row)
-            print(row)
-        print(header.fieldnames)
 
     # TODO: Read DNA sequence file into a variable
 
