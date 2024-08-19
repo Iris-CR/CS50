@@ -9,7 +9,6 @@ def main():
     for i in range(0, 8):
         chk_sum1 += getDigitEODSL(card_num, mult)
         mult *= 100
-        print(mult)
     mult = 1
     for i in range(0, 8):
         chk_sum2 += getDigitEODL(card_num, mult)
@@ -35,9 +34,10 @@ def main():
 
 
 def getDigitEODSL(card, multp):
-    temp = card % (100 * multp) / (10 * multp) *2
+    temp = card % (100 * multp) / (10 * multp) * 2
     if temp >= 10:
         temp = temp % 10 + 1
+    print(temp)
     return temp
 
 
