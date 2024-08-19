@@ -34,14 +34,14 @@ def main():
 
 
 def getDigitEODSL(card, multp):
-    temp = int(card % (100 * multp) / (10 * multp) * 2)
+    temp = card % (100 * multp) / (10 * multp) * 2
     if temp >= 10:
         temp = temp % 10 + 1
-    print(temp)
     return temp
 
 
 def getDigitEODSLRaw(card, multp):
+    print(int(card % (100 * multp) / (10 * multp)))
     return card % (100 * multp) / (10 * multp)
 
 
