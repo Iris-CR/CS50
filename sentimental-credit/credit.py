@@ -20,6 +20,13 @@ def main():
         card_t = 2
     elif getDigitEODSLRaw(card_num, mult) == 0 and getDigitEODL(card_num, mult) == 3 and (getDigitEODSLRaw(card_num, mult / 100) == 4 or getDigitEODSLRaw(card_num, mult / 100) == 7):
         card_t = 3
+    if (chk_sum1 + chk_sum2) %¨10 == 0:
+        if card_t == 1:
+            print("VISA")
+        elif card_t == 2:
+            print("MASTERCARD")
+        elif card_t == 3:
+            print("AMEX")
 
 
 def getDigitEODSL(card, multp):
