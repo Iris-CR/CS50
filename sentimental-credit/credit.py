@@ -41,7 +41,6 @@ def getDigitEODSL(card, multp):
 
 
 def getDigitEODSLRaw(card, multp):
-    print(int(card % (100 * multp) / (10 * multp)))
     return card % (100 * multp) / (10 * multp)
 
 
