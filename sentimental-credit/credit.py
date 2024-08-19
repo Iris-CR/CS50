@@ -18,7 +18,7 @@ def main():
         card_t = 1
     elif getDigitEODSLRaw(card_num, mult) == 5 and getDigitEODL(card_num, mult) > 0 and getDigitEODL(card_num, mult) < 6:
         card_t = 2
-    elif getDigitEODSLRaw(card_num, mult) == 0 and getDigitEODL(card_num, mult) == 3 and getDigitEODSLRaw(card_num)
+    elif getDigitEODSLRaw(card_num, mult) == 0 and getDigitEODL(card_num, mult) == 3 and (getDigitEODSLRaw(card_num, mult / 100) == 4 or getDigitEODSLRaw(card_num, mult / 100) == 7)
 
 
 def getDigitEODSL(card, multp):
