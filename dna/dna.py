@@ -28,7 +28,7 @@ def main():
     for dna in dnas:
         for col in dna:
             for _ in range(0, strs.__len__()):
-                if col[strs[_]] == values[_]:
+                if dna[strs[_]] == values[_]:
                     print(f"{strs[_]} - {values[_]}")
 
 
