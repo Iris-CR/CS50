@@ -20,7 +20,7 @@ def main():
         card_t = 2
     elif getDigitEODSLRaw(card_num, mult) == 0 and getDigitEODL(card_num, mult) == 3 and (getDigitEODSLRaw(card_num, mult / 100) == 4 or getDigitEODSLRaw(card_num, mult / 100) == 7):
         card_t = 3
-    if (chk_sum1 + chk_sum2) %¨10 == 0:
+    if (chk_sum1 + chk_sum2) % 10 == 0:
         if card_t == 1:
             print("VISA")
         elif card_t == 2:
@@ -30,7 +30,7 @@ def main():
         else:
             print("INVALID")
     else:
-        print("INVALID)
+        print("INVALID")
 
 
 def getDigitEODSL(card, multp):
@@ -41,11 +41,11 @@ def getDigitEODSL(card, multp):
 
 
 def getDigitEODSLRaw(card, multp):
-    return card % (100 * multp) / (10 * mult)
+    return card % (100 * multp) / (10 * multp)
 
 
 def getDigitEODL(card, multp):
-    return card % (10 * multp) / mult
+    return card % (10 * multp) / multp
 
 
 main()
