@@ -26,7 +26,7 @@ def main():
 
     # TODO: Check database for matching profiles
     for _ in dnas:
-        dnas[_]
+        
 
 
     return
