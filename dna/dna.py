@@ -10,8 +10,10 @@ def main():
 
     # TODO: Read database file into a variable
     dnas = []
+    dna_seq = []
     with open(sys.argv[1]) as fdb:
         header = csv.DictReader(fdb)
+        
         for row in header:
             dnas.append(row)
 
