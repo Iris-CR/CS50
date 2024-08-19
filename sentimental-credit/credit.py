@@ -9,6 +9,7 @@ def main():
     for i in range(0, 8):
         chk_sum1 += getDigitEODSL(card_num, mult)
         mult *= 100
+        print(mult)
     mult = 1
     for i in range(0, 8):
         chk_sum2 += getDigitEODL(card_num, mult)
