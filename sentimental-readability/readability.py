@@ -12,10 +12,10 @@ def main():
         elif text[i] == ' ':
             words += 1
         elif text[i] == '.' or text[i] == '!' or text[i] == '?':
-            sent +=1
+            sent += 1
     words += 1
     cli = 0.0588 * average_by_100(letters, words) - 0.296 * average_by_100(sent, words) - 15.8
-    grade = int(cli)
+    grade = round(cli)
     if cli < 1:
         print("Before Grade 1")
     elif (cli > 16):
