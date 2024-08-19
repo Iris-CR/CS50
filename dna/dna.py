@@ -26,11 +26,15 @@ def main():
 
     # TODO: Check database for matching profiles
     for dna in dnas:
+        match_dna = True
         for _ in range(0, strs.__len__()):
             if int(dna[strs[_]]) != values[_]:
+                match_dna = False
                 break
-            print(f"{strs[_]} - {values[_]}")
-
+        if match_dna == True:
+            print(dna["name"])
+    else:
+        print("No match.")
 
 
     return
