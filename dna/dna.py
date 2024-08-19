@@ -20,11 +20,9 @@ def main():
     with open(sys.argv[2], 'r', encoding="utf-8") as seq_file:
         seq = seq_file.read()
 
-    # TODO: Find longest match of each STR in DNA sequence
     values = []
     for _ in strs:
         values.append(longest_match(seq, _))
-        print(f"{_} - {values[_]}")
 
     # TODO: Check database for matching profiles
 
