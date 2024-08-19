@@ -33,8 +33,8 @@ def main():
                 break
         if match_dna == True:
             print(dna["name"])
-    else:
-        print("No match.")
+        else:
+            print("No match.")
 
 
     return
