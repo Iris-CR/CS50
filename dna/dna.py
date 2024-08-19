@@ -26,7 +26,8 @@ def main():
 
     # TODO: Check database for matching profiles
     for dna in dnas:
-        for col in range(1, dna.fieldnames.__len__()):
+        for col in dna:
+            if strs 
             print(col)
 
 
