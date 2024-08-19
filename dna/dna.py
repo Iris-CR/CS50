@@ -15,9 +15,9 @@ def main():
         reader = csv.DictReader(fdb)
         for row in reader:
             dnas.append(row)
-        for dna_str in range(1, reader.fieldnames.__len__()):
-            strs.append(dna_str)
-            print(dna_str)
+        for col in range(1, reader.fieldnames.__len__()):
+            strs.append(col)
+            print(__getitem__(col))
 
     # TODO: Read DNA sequence file into a variable
 
