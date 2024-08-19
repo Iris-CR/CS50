@@ -11,11 +11,11 @@ def main():
     # TODO: Read database file into a variable
     dnas = []
     with open(sys.argv[1]) as fdb:
-        header = csv.DictReader(fdb)
-        for row in header:
+        reader = csv.DictReader(fdb)
+        for row in reader:
             dnas.append(row)
             print(row)
-        print(header.fieldnames)
+        print(reader.fieldnames)
 
     # TODO: Read DNA sequence file into a variable
 
