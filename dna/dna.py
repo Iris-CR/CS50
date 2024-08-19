@@ -10,12 +10,14 @@ def main():
 
     # TODO: Read database file into a variable
     dnas = []
+    strs = []
     with open(sys.argv[1]) as fdb:
         reader = csv.DictReader(fdb)
         for row in reader:
             dnas.append(row)
-            print(row)
-        print(reader.fieldnames)
+        for dna_str in range(1, reader.fieldnames.__len__()):
+            strs.append(dna_str)
+            print(dna_str)
 
     # TODO: Read DNA sequence file into a variable
 
