@@ -3,7 +3,6 @@ import sys
 
 
 def main():
-
     if len(sys.argv) != 3:
         print("Error - Try: python dna.py database.csv sequence.txt")
         return
@@ -24,7 +23,6 @@ def main():
     for _ in strs:
         values.append(longest_match(seq, _))
 
-    # TODO: Check database for matching profiles
     found = False
     for dna in dnas:
         match_dna = True
@@ -37,8 +35,6 @@ def main():
             found = True
     if found == False:
         print("No match")
-
-
     return
 
 
