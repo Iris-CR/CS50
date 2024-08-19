@@ -25,10 +25,13 @@ def main():
         values.append(longest_match(seq, _))
 
     # TODO: Check database for matching profiles
-    for _ in range(0, strs.__len__()):
-        for dna in dnas:
-            if dna[strs[_]] != values[_]
-        print(f"{strs[_]} - {values[_]}")
+    for dna in dnas:
+        for _ in range(0, strs.__len__()):
+            if dna[strs[_]] != values[_]:
+                print(f"{dna[strs[_]]} - {values[_]}")
+                print("exit")
+                break
+            print(f"{strs[_]} - {values[_]}")
 
 
 
