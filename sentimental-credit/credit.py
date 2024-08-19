@@ -1,5 +1,6 @@
 import cs50
 
+
 def main():
     card_num = cs50.get_int("Number: ")
     chk_sum1 = 0
