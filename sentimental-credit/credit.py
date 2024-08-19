@@ -34,7 +34,7 @@ def main():
 
 
 def getDigitEODSL(card, multp):
-    temp = card % (100 * multp) / (10 * multp) * 2
+    temp = int(card % (100 * multp) / (10 * multp) * 2)
     if temp >= 10:
         temp = temp % 10 + 1
     print(temp)
