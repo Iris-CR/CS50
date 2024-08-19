@@ -13,7 +13,8 @@ def main():
     dna_seq = []
     with open(sys.argv[1]) as fdb:
         header = csv.DictReader(fdb)
-        
+        for str in header:
+            dna_seq.append()
         for row in header:
             dnas.append(row)
 
