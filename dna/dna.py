@@ -25,8 +25,8 @@ def main():
         values.append(longest_match(seq, _))
 
     # TODO: Check database for matching profiles
-    for strs, values in dnas:
-        print(strs, values)
+    for _ in dnas:
+        print(_)
 
 
     return
