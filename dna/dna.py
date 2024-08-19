@@ -27,10 +27,7 @@ def main():
     # TODO: Check database for matching profiles
     for dna in dnas:
         for _ in range(0, strs.__len__()):
-            if dna[strs[_]] != values[_]:
-                print(f"{dna[strs[_]]} - {values[_]}")
-                print(f"{type(dna[strs[_]])} - {type(values[_])}")
-                print("exit")
+            if int(dna[strs[_]]) != values[_]:
                 break
             print(f"{strs[_]} - {values[_]}")
 
