@@ -25,6 +25,7 @@ def main():
         values.append(longest_match(seq, _))
 
     # TODO: Check database for matching profiles
+    found = False
     for dna in dnas:
         match_dna = True
         for _ in range(0, strs.__len__()):
@@ -33,8 +34,9 @@ def main():
                 break
         if match_dna == True:
             print(dna["name"])
-        else:
-            print("No match.")
+            found = True
+    if found == False:
+        print("No match")
 
 
     return
