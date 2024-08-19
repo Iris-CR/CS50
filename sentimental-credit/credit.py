@@ -27,6 +27,10 @@ def main():
             print("MASTERCARD")
         elif card_t == 3:
             print("AMEX")
+        else:
+            print("INVALID")
+    else:
+        print("INVALID)
 
 
 def getDigitEODSL(card, multp):
