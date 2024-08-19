@@ -29,7 +29,7 @@ def main():
         for col in dna:
             for _ in range(0, strs.__len__()):
                 if col == strs[_]:
-                    print(values[_])
+                    print(f"{strs[_]} - {values[_]}")
 
 
 
