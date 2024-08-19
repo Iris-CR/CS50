@@ -18,7 +18,7 @@ def main():
     grade = int(cli)
     if cli < 1:
         print("Before Grade 1")
-    elif (CLI > 16):
+    elif (cli > 16):
         print("Grade 16+\n")
     else:
         print("Grade", grade)
@@ -26,3 +26,6 @@ def main():
 
 def average_by_100(a, b):
     return 100 * a / b
+
+
+main()
