@@ -1,1 +1,1 @@
-SELECT * FROM people WHERE id
+SELECT id FROM people WHERE name = 'Chadwick Boseman'
